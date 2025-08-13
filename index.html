@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techspire</title>
+  <!-- Font Awesome Free CDN (v6.5.1) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-i2n1XeWqYNYlK3xv3tpzQJY1s0E9xS0hz7hJ7ZoZSC6En6MeD4BNCayBHZkYX4rJw2T1vIuKUCCNNO7CnIkR2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    #menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(10px);
+    }
+
+    #menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-10px);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-neutral-900">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-5 left-1/2 transform -translate-x-1/2 
+              bg-white/70 backdrop-blur-md px-8 py-4 rounded-full 
+              flex items-center justify-between max-w-[95%] md:max-w-[900px] w-full z-50 
+              border border-neutral-200 shadow-lg transition-all duration-300 ease-in-out 
+              translate-y-0 opacity-100">
+    <a href="#" class="flex items-center space-x-3">
+      <img src="./images/techspirelogo.png" alt="Techspire Logo" class="h-9 w-auto" />
+    </a>
+    <div class="hidden md:flex space-x-3 text-base font-normal text-neutral-800">
+      <a href="#"
+        class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Home</a>
+      <a href="#core-capabilities"
+        class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Capabilities</a>
+      <a href="#solutions"
+        class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Solutions</a>
+      <a href="#spaces"
+        class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Industries</a>
+      <a href="#contact"
+        class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Contact</a>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-neutral-900 focus:outline-none relative w-7 h-7">
+        <span class="block absolute h-0.5 w-full bg-current transform transition duration-300 ease-in-out top-1"></span>
+        <span class="block absolute h-0.5 w-full bg-current transform transition duration-300 ease-in-out top-3"></span>
+        <span class="block absolute h-0.5 w-full bg-current transform transition duration-300 ease-in-out top-5"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-24 left-1/2 transform -translate-x-1/2 scale-y-0 opacity-0 transition-all duration-300 ease-in-out
+              bg-white/90 backdrop-blur-md rounded-xl shadow-lg w-11/12 max-w-sm z-40 border border-neutral-200 
+              origin-top overflow-hidden md:hidden">
+    <ul class="flex flex-col space-y-3 p-6 text-center text-base font-normal text-neutral-800">
+      <li><a href="#"
+          class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Home</a>
+      </li>
+      <li><a href="#core-capabilities"
+          class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Capabilities</a>
+      </li>
+      <li><a href="#solutions"
+          class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Solutions</a>
+      </li>
+      <li><a href="#spaces"
+          class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Industries</a>
+      </li>
+      <li><a href="#contact"
+          class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Contact</a>
+      </li>
+    </ul>
+  </div>
+<!-- Hero + Video + Purpose Section -->
+<section class="bg-white text-center pt-32 sm:pt-44 pb-10 text-neutral-900 overflow-hidden">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    
+    <!-- Hero Headline -->
+    <h1 class="font-light tracking-tight leading-tight mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-5xl">
+      <span class="block">Transform your spaces with intelligent 
+</span>
+      <span class="block h-3 sm:h-4"></span>
+      <span class="text-black drop-shadow-sm">AI & IoT solutions</span>
+    </h1>
+
+    <!-- Subtext -->
+    <p class="text-base sm:text-lg md:text-xl text-neutral-600 font-light mb-10 leading-relaxed">
+      We design systems that automate routine tasks, enhance security and streamline daily life.
+Want to see what’s possible?
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#video-overlay"
+      class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium text-white 
+       animated-gradient
+      hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-in-out 
+      shadow-md hover:shadow-xl group">
+      Imagine the Possibilities
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Video with Overlay -->
+
+
+</section>
+
+<section class="relative w-full py-10 sm:py-16">
+  <div class="relative w-full overflow-hidden rounded-none sm:rounded-xl shadow-lg">
+
+    <!-- Video Wrapper -->
+    <div class="relative w-full h-[300px] sm:h-[400px] md:h-[380px] lg:h-[320px] xl:h-[300px] 2xl:h-[280px]">
+
+      <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="./video/video_overlay.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay -->
+      <div id="video-overlay" class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Glassmorphic Content -->
+      <div class="absolute inset-0 flex items-center justify-center px-4 z-10">
+        <div class="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 sm:p-10 transition-all duration-300">
+          <div class="text-center text-white space-y-4">
+
+            <!-- Title -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-light drop-shadow-md">
+              Built with Purpose
+            </h2>
+
+            <!-- Description -->
+            <p class="text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light text-white/90 leading-relaxed tracking-wide">
+              Our mission is to harness technology for everyone. We build AI‑driven and IoT‑enabled solutions that automate the mundane, solve 
+              real‑world problems and empower people to live, work and move through their spaces more safely and effortlessly.
+
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    #3a0ca3,
+    #4361ee,
+    #7209b7,
+    #4895ef,
+    #560bad
+  );
+  background-size: 500% 500%;
+  animation: gradientShift 20s ease infinite;
+  transition: all 0.5s ease;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
+
+
+<section id="core-capabilities" class="py-16 px-6 text-[#111] bg-white">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center mb-14 underline-container" data-gsap>
+      <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+        Explore Our Core
+        <span class="relative inline-block pb-3">
+          <span class="title-main">Capabilities</span>
+          <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></span>
+        </span>
+      </h2>
+      <p class="text-gray-700 text-base sm:text-lg font-light max-w-2xl mx-auto">
+       From AI surveillance to autonomous robotics, these are just some of the powerful capabilities we offer — and we can do much more.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+  
+  <!-- Card Template (Repeated 10 times with unique content) -->
+     <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/autonomous_Systems_.svg" alt="Autonomous Systems & Robotics" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500 ease-in-out" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Autonomous Systems & Robotics</h3>
+      <p class="text-base text-gray-700 font-light"> Smart robots for versatile, automated operations.</p>
+    </div>
+  </div>
+  <!-- 1. License Plate Recognition -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/license_Plate_Recognition.svg" alt="License Plate Recognition" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500 ease-in-out" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">License Plate Recognition</h3>
+      <p class="text-base text-gray-700 font-light">Instantly identify vehicles and log entries.</p>
+    </div>
+  </div>
+
+  <!-- 2. Face Recognition -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/face_Recognition.svg" alt="Face Recognition" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Face Recognition</h3>
+      <p class="text-base text-gray-700 font-light">Touch-free, secure identity verification.</p>
+    </div>
+  </div>
+
+    <!-- 4. CCTV Monitoring -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/cctv_Monitoring.svg" alt="CCTV Monitoring" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">CCTV Monitoring</h3>
+      <p class="text-base text-gray-700 font-light">Live feeds with AI anomaly alerts.</p>
+    </div>
+  </div>
+
+  <!-- 3. Smart Gate Access -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/smart_Gate_Access.svg" alt="Smart Gate Access" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Smart Gate Access</h3>
+      <p class="text-base text-gray-700 font-light">Automated entry control for authorised access.</p>
+    </div>
+  </div>
+
+  <!-- 7. Virtual Patrolling -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/virtual_Patrolling.svg" alt="Virtual Patrolling" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Virtual Patrolling</h3>
+      <p class="text-base text-gray-700 font-light">AI-powered patrol simulations for large areas.</p>
+    </div>
+  </div>
+
+    <!-- 6. Visitor Management -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/visitor_Management.svg" alt="Visitor Management" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Visitor Management</h3>
+      <p class="text-base text-gray-700 font-light">Seamless guest check-in and tracking.</p>
+    </div>
+  </div>
+
+  <!-- 5. Parking Management -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/Parking_Management.svg" alt="Parking Management" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Parking Management</h3>
+      <p class="text-base text-gray-700 font-light">Log usage, manage availability, and enforce rules seamlessly.</p>
+    </div>
+  </div>
+
+
+
+
+  <!-- 8. Workflow Automation -->
+  <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+    <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+    <div class="aspect-[4/3] bg-white overflow-hidden">
+      <img src="./images/workflow_Automation.svg" alt="Workflow Automation" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+    </div>
+    <div class="p-5 pt-3 space-y-2 relative z-20">
+      <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Workflow Automation</h3>
+      <p class="text-base text-gray-700 font-light">Trigger real-time actions based on events.</p>
+    </div>
+  </div>
+
+  <!-- 9. Sensor Integration -->
+  <div class="lg:col-start-2">
+    <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+      <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+      <div class="aspect-[4/3] bg-white overflow-hidden">
+        <img src="./images/sensor_Integration.svg" alt="Sensor Integration" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="p-5 pt-3 space-y-2 relative z-20">
+        <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Sensor Integration</h3>
+        <p class="text-base text-gray-700 font-light"> Monitor and act on real-time sensor data.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. Control Panel -->
+  <div class="lg:col-start-3">
+    <div class="relative group bg-white/80 rounded-3xl border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-1" data-gsap>
+      <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+      <div class="aspect-[4/3] bg-white overflow-hidden">
+        <img src="./images/control_Panel.svg" alt="Control Panel and Updates" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="p-5 pt-3 space-y-2 relative z-20">
+        <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mt-0">Control Panel</h3>
+        <p class="text-base text-gray-700 font-light">Central dashboard for complete oversight.</p>
+      </div>
+    </div>
+  </div>
+<!-- 11. And More -->
+<div class="lg:col-start-4 flex flex-col items-center justify-center text-center px-8 py-12 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-500 space-y-6 border border-gray-100" data-gsap>
+  
+  <!-- Title -->
+  <h4 class="text-3xl font-medium text-gray-900 tracking-tight">
+    And more.
+  </h4>
+
+  <!-- Subtext -->
+  <p class="text-lg text-gray-600 leading-relaxed max-w-sm">
+    If you can imagine it,<br>we can build it.
+  </p>
+
+  <!-- Button -->
+  <a href="#more" 
+     class="relative inline-block px-8 py-3 rounded-full text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden group animated-gradient">
+     
+    <span class="relative z-10">Explore More</span>
+    <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+  </a>
+</div>
+
+
+
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<section id="solutions" class="py-20 px-6 bg-white relative">
+
+    <div class="text-center mb-14 underline-container" data-gsap>
+      <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+        <span class="relative inline-block pb-3">
+          <span class="title-main">Solutions</span>
+          <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></span>
+        </span>
+        in Action
+      </h2>
+      <p class="text-gray-700 text-base sm:text-lg font-light max-w-2xl mx-auto">
+       From AI surveillance to autonomous robotics, these are just some of the powerful capabilities we offer — and we can do much more.
+      </p>
+    </div>
+
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+<div class="relative flex flex-col h-full rounded-3xl overflow-hidden border border-white/20 backdrop-blur-xl bg-white/30 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl group">
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <img src="./2151111276.jpg" alt="KiDQ" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+  </div>
+  <div class="flex flex-col flex-grow p-6 relative z-10">
+    <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mb-3 transition-colors duration-300 group-hover:text-blue-600">
+      KiDQ <span class="card-subtitle">Smart School Pickup</span>
+    </h3>
+    <ul class="list-disc list-inside text-base text-gray-700 font-light space-y-1 flex-grow">
+      <li>Accelerate and secure student dispersal</li>
+      <li>Recognise vehicles and guardians automatically</li>
+      <li>Receive real-time notifications and status updates</li>
+    </ul>
+  </div>
+  <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-white/20 transition-all duration-500"></div>
+  <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 animate-shine"></div>
+</div>
+
+<style>
+  .card-subtitle {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #111827;
+    letter-spacing: 0.02em;
+    margin-top: 0.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+
+
+
+    <div class="relative flex flex-col h-full rounded-3xl overflow-hidden border border-white/20 backdrop-blur-xl bg-white/30 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl group">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <img src="./2151908090.jpg" alt="WatchTower" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+      </div>
+      <div class="flex flex-col flex-grow p-6 relative z-10">
+        <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mb-3 transition-colors duration-300 group-hover:text-purple-600">
+          WatchTower <span class="card-subtitle">AI Command Centre</span>
+        </h3>
+        <ul class="list-disc list-inside text-base text-gray-700 font-light space-y-1 flex-grow">
+          <li>Consolidate live video, patrol routes and alerts</li>
+          <li>Automatically route tasks to field teams</li>
+        </ul>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-white/20 transition-all duration-500"></div>
+      <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 animate-shine"></div>
+    </div>
+
+
+    <div class="relative flex flex-col h-full rounded-3xl overflow-hidden border border-white/20 backdrop-blur-xl bg-white/30 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl group">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <img src="./driving-night-touch-screen-controls-car-generated-by-ai.jpg" alt="GatePass" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+      </div>
+      <div class="flex flex-col flex-grow p-6 relative z-10">
+        <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mb-3 transition-colors duration-300 group-hover:text-green-600">
+          GatePass <span class="card-subtitle">Smart Access & Parking</span>
+        </h3>
+        <ul class="list-disc list-inside text-base text-gray-700 font-light space-y-1 flex-grow">
+          <li>Verify license plates for authorised entry</li>
+          <li>Track entry and exit in real time</li>
+        </ul>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-white/20 transition-all duration-500"></div>
+      <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 animate-shine"></div>
+    </div>
+
+
+    <div class="relative flex flex-col h-full rounded-3xl overflow-hidden border border-white/20 backdrop-blur-xl bg-white/30 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl group">
+      <div class="relative aspect-[4/3] overflow-hidden">
+        <img src="./high-tech-travel-future-time.jpg" alt="VisitorPass" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+      </div>
+      <div class="flex flex-col flex-grow p-6 relative z-10">
+        <h3 class="text-xl sm:text-2xl font-medium text-gray-900 mb-3 transition-colors duration-300 group-hover:text-pink-600">
+          VisitorPass <span class="card-subtitle">Visitor Management</span>
+        </h3>
+        <ul class="list-disc list-inside text-base text-gray-700 font-light space-y-1 flex-grow">
+          <li>Enable QR, facial or plate-based check-ins</li>
+          <li>Maintain real-time visitor logs and analytics</li>
+        </ul>
+      </div>
+      <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-white/20 transition-all duration-500"></div>
+      <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 animate-shine"></div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shine {
+  animation: shine 1.8s linear infinite;
+}
+</style>
+
+
+
+
+ -->
+
+
+
+<section id="solutions" class="py-20 px-6 bg-white relative">
+
+    <div class="text-center mb-14 underline-container" data-gsap>
+      <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+        <span class="relative inline-block pb-3">
+          <span class="title-main">Solutions</span>
+          <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></span>
+        </span>
+        in Action
+      </h2>
+      <p class="text-gray-700 text-base sm:text-lg font-light max-w-2xl mx-auto">
+       From AI surveillance to autonomous robotics, these are just some of the powerful capabilities we offer — and we can do much more.
+      </p>
+    </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="group flex flex-col h-[620px] rounded-3xl overflow-hidden border border-white/20 shadow-lg 
+                transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl 
+                bg-gradient-to-b from-white/30 to-white/10 backdrop-blur-xl">
+      <!-- Image -->
+      <div class="relative h-1/2 overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+        <img src="./images/kidq.png" alt="KiDQ"
+             class="absolute inset-0 w-full h-full object-cover rounded-b-[60px] " />
+      </div>
+      <!-- Details -->
+      <div class="flex flex-col flex-1 p-8">
+        <h3 class="text-3xl font-medium text-gray-900 mb-3">
+          KiDQ
+          <span class="card-subtitle text-lg font-normal text-black block">Smart School Pickup</span>
+        </h3>
+        <ul class="text-lg text-gray-700 font-light space-y-3 mt-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Accelerate and secure student dispersal
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Recognise vehicles and guardians automatically
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group flex flex-col h-[620px] rounded-3xl overflow-hidden border border-white/20 shadow-lg 
+                transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl 
+                bg-gradient-to-b from-white/30 to-white/10 backdrop-blur-xl">
+      <div class="relative h-1/2 overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+        <img src="./images/watchtower.jpg" alt="WatchTower"
+             class="absolute inset-0 w-full h-full object-cover rounded-b-[60px] " />
+      </div>
+      <div class="flex flex-col flex-1 p-8">
+        <h3 class="text-3xl font-medium text-gray-900 mb-3">
+          WatchTower
+          <span class="card-subtitle text-lg font-normal text-black block">AI Command Centre</span>
+        </h3>
+        <ul class="text-lg text-gray-700 font-light space-y-3 mt-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Consolidate live video, patrol routes and alerts
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Automatically route tasks to field teams
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group flex flex-col h-[620px] rounded-3xl overflow-hidden border border-white/20 shadow-lg 
+                transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl 
+                bg-gradient-to-b from-white/30 to-white/10 backdrop-blur-xl">
+      <div class="relative h-1/2 overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+        <img src="./images/GatePass.jpg" alt="GatePass"
+             class="absolute inset-0 w-full h-full object-cover rounded-b-[60px] " />
+      </div>
+      <div class="flex flex-col flex-1 p-8">
+        <h3 class="text-3xl font-medium text-gray-900 mb-3">
+          GatePass
+          <span class="card-subtitle text-lg font-normal text-black block">Smart Access & Parking</span>
+        </h3>
+        <ul class="text-lg text-gray-700 font-light space-y-3 mt-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Verify license plates for authorised entry
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Track entry and exit in real time
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="group flex flex-col h-[620px] rounded-3xl overflow-hidden border border-white/20 shadow-lg 
+                transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl 
+                bg-gradient-to-b from-white/30 to-white/10 backdrop-blur-xl">
+      <div class="relative h-1/2 overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+        <img src="./images/visitorPass.jpg" alt="VisitorPass"
+             class="absolute inset-0 w-full h-full object-cover rounded-b-[60px] " />
+      </div>
+      <div class="flex flex-col flex-1 p-8">
+        <h3 class="text-3xl font-medium text-gray-900 mb-3">
+          VisitorPass
+          <span class="card-subtitle text-lg font-normal text-black block"> Fast, Contactless Check-In</span>
+        </h3>
+        <ul class="text-lg text-gray-700 font-light space-y-3 mt-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Enable QR, facial or plate‑based check‑ins
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M16.707 5.293a1 1 0 0 0-1.414 0L9 11.586 6.707 9.293a1 1 0 1 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z" />
+            </svg>
+            Maintain real‑time visitor logs and analytics
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ 
+
+<section id="spaces" class="py-16 px-6 bg-white text-[#111]">
+  <div class="max-w-7xl mx-auto text-center mb-16 underline-container" data-gsap>
+    <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-gray-900">Spaces</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></span>
+      </span>
+      We Power
+    </h2>
+    <p class="text-gray-600 text-base sm:text-lg font-light max-w-2xl mx-auto">
+      We help teams across many sectors bring intelligence to their spaces.
+    </p>
+  </div>
+
+  <!-- Responsive Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- Card Template -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-pink-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="home" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Homes</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Enhance safety, convenience, and energy efficiency with smart automation.</p>
+    </div>
+
+    <!-- Schools & Campuses -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-cyan-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="school" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Schools & Campuses</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Automate safety, attendance and pickup processes.</p>
+    </div>
+
+    <!-- Security Agencies -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-purple-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="shield" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Security Agencies</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Centralise video intelligence and dispatch rapid alerts.</p>
+    </div>
+
+    <!-- Residential Communities -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-green-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="users" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Residential Communities</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Manage access control and visitor logs with ease.</p>
+    </div>
+
+    <!-- Offices & Co-working -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-yellow-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="briefcase" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Offices & Co-working</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Enhance workspace entry, parking and automation.</p>
+    </div>
+
+    <!-- Commercial Properties -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-indigo-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="building-2" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Commercial Properties</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Integrate monitoring and automation across large complexes.</p>
+    </div>
+
+    <!-- Restaurants & Food Centres -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-red-400 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-red-100 flex items-center justify-center text-red-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="utensils-crossed" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Restaurants & Food Centres</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Optimise queue management and monitor kitchens smartly.</p>
+    </div>
+
+    <!-- Sports Centres & Pools -->
+    <div class="space-card group relative p-8 rounded-3xl bg-white/30 border border-white/20 backdrop-blur-lg text-center
+                shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-gradient-to-br from-white/40 to-white/10 hover:ring-1 hover:ring-cyan-400 sm:col-span-2 md:col-span-1 md:col-start-2 h-[420px]">
+      <div class="space-icon mx-auto mb-5 w-16 h-16 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 shadow-md
+                  group-hover:scale-110 transition-transform duration-300">
+        <i data-lucide="dumbbell" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Sports Centres & Pools</h3>
+      <p class="text-sm sm:text-base text-gray-700 font-light">Ensure safety compliance and track real-time occupancy.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ✅ Build Your Own Section -->
+<section id="build-your-own" class="py-16 px-6 bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <h3 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">Build Your Own</h3>
+    <p class="text-gray-700 text-base sm:text-lg font-light mb-6">
+      Need something specific? <br>
+      We design and deliver custom AI and IoT solutions using the same platform and core capabilities.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <!-- Primary Animated Gradient Button -->
+      <a href="#contact"
+         class="px-6 py-3 rounded-full text-white font-medium
+                animated-gradient transition-all duration-300 shadow-md">
+        Talk to Us
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Contact Section -->
+<section id="contact" class="contact-wrapper py-10 px-6 ">
+  <!-- Heading -->
+  <div class="max-w-7xl mx-auto text-center mb-12 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
+      Get in
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-gray-900">Touch</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></span>
+      </span>
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg font-light">
+      Let’s build something smart together.<br>
+      Whether you manage a gate, a facility, or a campus — we are here to help.
+    </p>
+  </div>
+
+  <!-- Cards -->
+  <div class="w-full flex justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 text-center">
+      
+      <!-- Email -->
+      <div class="contact-card flex flex-col items-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-64 order-1">
+        <div class="contact-icon mb-2 text-blue-600">
+          <i data-lucide="mail" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-lg font-semibold">Email</h3>
+        <p><a href="mailto:hello@techspire.ai" class="text-blue-500 hover:underline">hello@techspire.ai</a></p>
+      </div>
+
+      <!-- Whatsapp -->
+      <div class="contact-card flex flex-col items-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow w-64 order-2 sm:justify-self-end">
+        <div class="contact-icon mb-2 text-green-600">
+          <i data-lucide="phone" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-lg font-semibold">Whatsapp</h3>
+        <p><a href="tel:+65XXXXXXXX" class="text-blue-500 hover:underline">+65 XXXX XXXX</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Lucide Icons Script -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+
+
+
+
+
+<!-- ✅ Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- ✅ CSS Styling -->
+<style>
+:root {
+  --accent-start: #9333ea;  /* Purple */
+  --accent-end: #ec4899;    /* Pink */
+  --contact-bg: #f9fafb;
+}
+
+.contact-wrapper {
+  background: var(--contact-bg);
+  padding: 5rem 1rem;
+}
+
+/* ✅ Bento Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Cards */
+.contact-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.contact-card:hover::after {
+  opacity: 0.08;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(147, 51, 234, 0.25);
+}
+
+/* ✅ Icon */
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-icon i {
+  width: 28px;
+  height: 28px;
+}
+
+/* ✅ Text */
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-link {
+  color: var(--accent-start);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ✅ Large CTA Card */
+.contact-card.large {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* ✅ Buttons */
+.btn-primary,
+.btn-outline {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(147, 51, 234, 0.35);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent-start);
+  color: var(--accent-start);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--accent-start);
+  color: #fff;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-card.large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-card.large {
+    grid-column: span 1;
+  }
+}
+</style>
+
+<!-- ✅ GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.contact-card').forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      delay: i * 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+});
+</script>
+
+<!-- ✅ Footer Section -->
+<section class="footer-section bg-white" id="footer">
+  <div class="footer-overlay"></div>
+  <div class="footer-wrapper">
+    
+    <!-- Brand Info -->
+    <div class="footer-brand">
+      <h3 class="text-3xl sm:text-5xl font-light text-white-900 mb-4">Techspire Innovations Pte Ltd</h3>
+      <p>Smart solutions for everyday life</p>
+      
+      <!-- SVG Social Icons -->
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.04 8h4.91v16H.04V8zm7.18 0h4.7v2.2h.07c.66-1.25 2.3-2.56 4.73-2.56 5.06 0 6 3.3 6 7.59V24h-5V14.7c0-2.23-.04-5.1-3.1-5.1-3.1 0-3.58 2.42-3.58 4.93V24h-5V8z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X (formerly Twitter)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 1200 1227">
+            <path d="M725.6 545.5 1183 0H1077L681.8 468.5 371.7 0H0l483.2 700.4L0 1227h106l418.5-482.2L838.3 1227H1200L725.6 545.5Zm-147.4 169-48.4-69-375.5-535.7h151.3l301.7 430.2 48.4 69 390.7 557.4H894.3L578.2 714.5Z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 576 512">
+            <path d="M549.655 124.083c-6.281-23.65-24.764-42.217-48.376-48.51C458.539 64 288 64 288 64s-170.539 0-213.279 11.573c-23.612 6.293-42.095 24.86-48.376 48.51C16.232 168.198 16 224 16 224s.232 55.802 10.345 99.917c6.281 23.65 24.764 42.217 48.376 48.51C117.461 384 288 384 288 384s170.539 0 213.279-11.573c23.612-6.293 42.095-24.86 48.376-48.51C559.768 279.802 560 224 560 224s-.232-55.802-10.345-99.917zM232 320V128l142.857 96L232 320z"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer-meta">© 2025 |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms</a> |
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>About</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+<div class="footer-links">
+  <h4 class="">Explore</h4>
+  <ul class="space-y-2">
+    <li><a href="#" class="text-gray-600 hover:text-blue-600 transition">Home</a></li>
+    <li><a href="#core-capabilities" class="text-gray-600 hover:text-blue-600 transition">Capabilities</a></li>
+    <li><a href="#solutions" class="text-gray-600 hover:text-blue-600 transition">Solutions</a></li>
+    <li><a href="#spaces" class="text-gray-600 hover:text-blue-600 transition">Spaces</a></li>
+    <li><a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a></li>
+  </ul>
+</div>
+
+
+  </div>
+</section>
+
+<!-- ✅ Footer Styles -->
+<style>
+.footer-section {
+  position: relative;
+background: linear-gradient(135deg, #000080, #002983, #002394, #007e94);
+
+
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  color: #f9fafb;
+  padding: 4rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.footer-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-brand h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.footer-brand p {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #3b82f6;
+  color: #fff;
+  transform: translateY(-5px) scale(1.1);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-meta {
+  font-size: 0.9rem;
+  color: #a5b4fc;
+  margin-top: 1rem;
+}
+
+.footer-meta a {
+  color: #e0e7ff;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.footer-meta a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+.footer-meta a:hover::after {
+  width: 100%;
+}
+
+.footer-meta a:hover {
+  color: #fff;
+}
+
+.footer-links h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-links a {
+  position: relative;
+  display: inline-block;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.footer-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .footer-brand p {
+    color: #d1d5db;
+    margin-bottom: 0.8rem; /* removed space between `.8` and `rem` */
+  }
+
+  .footer-links h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+}
+
+</style>
+<!-- ✅ GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.space-card').forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      delay: i * 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+});
+</script>
+
+<!-- ✅ Styles -->
+<style>
+:root {
+  --bento-bg: #f8fafc;
+  --bento-card: #fff;
+  --accent-start: #9333ea;
+  --accent-end: #ec4899;
+}
+
+.spaces-wrapper {
+  background: var(--bento-bg);
+  padding: 5rem 1rem;
+}
+
+.spaces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.space-card {
+  background: var(--bento-card);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.space-card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.space-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.space-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 16px rgba(88, 88, 88, 0.25);
+}
+.space-icon i {
+  width: 28px;
+  height: 28px;
+}
+
+.space-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.4s ease;
+}
+.space-card:hover::after {
+  opacity: 0.08;
+}
+.space-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(88, 88, 88, 0.25);
+}
+
+@media (max-width: 640px) {
+  .spaces-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- ✅ GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.custom-card').forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      delay: i * 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+});
+</script>
+
+
+
+  <script>
+    const fillAmounts = new Map();
+
+    document.querySelectorAll('.underline-container').forEach(container => {
+      fillAmounts.set(container, 0);
+    });
+
+    // Intersection Observer to track if a container is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const container = entry.target;
+        container.dataset.inView = entry.isIntersecting ? "true" : "false";
+      });
+    }, { threshold: 0.4 }); // 40% visible triggers in/out
+
+    document.querySelectorAll('.underline-container').forEach(container => observer.observe(container));
+
+    // Scroll event to gradually fill or reset
+    function updateUnderline() {
+      document.querySelectorAll('.underline-container').forEach(container => {
+        const underline = container.querySelector('.scroll-underline');
+        if (!underline) return;
+
+        let fill = fillAmounts.get(container) || 0;
+
+        if (container.dataset.inView === "true") {
+          // If in view, slowly fill
+          fill += 0.02;
+        } else {
+          // If out of view, faster reset
+          fill -= 0.05;
+        }
+
+        fill = Math.max(0, Math.min(1, fill)); // Clamp between 0 and 1
+        fillAmounts.set(container, fill);
+
+        underline.style.transform = `scaleX(${fill})`;
+      });
+
+      requestAnimationFrame(updateUnderline); // Smooth, frame-based updates
+    }
+
+    requestAnimationFrame(updateUnderline);
+  </script>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(reveal => revealObserver.observe(reveal));
+  </script>
+
+  <!-- Navbar Scroll and Mobile Menu Control -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+    let lastScroll = window.scrollY;
+    let isOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      menuBtn.classList.toggle('open', isOpen);
+
+      mobileMenu.classList.toggle('scale-y-0', !isOpen);
+      mobileMenu.classList.toggle('opacity-0', !isOpen);
+      mobileMenu.classList.toggle('scale-y-100', isOpen);
+      mobileMenu.classList.toggle('opacity-100', isOpen);
+    });
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        navbar.classList.add('-translate-y-full', 'opacity-0');
+        navbar.classList.remove('translate-y-0', 'opacity-100');
+
+        if (isOpen) {
+          isOpen = false;
+          menuBtn.classList.remove('open');
+          mobileMenu.classList.add('scale-y-0', 'opacity-0');
+          mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+        }
+      } else {
+        navbar.classList.remove('-translate-y-full', 'opacity-0');
+        navbar.classList.add('translate-y-0', 'opacity-100');
+      }
+      lastScroll = currentScroll;
+    });
+  </script>
+</body>
+
+</html>
